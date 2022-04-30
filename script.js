@@ -77,15 +77,34 @@ class Clock {
                         g.setAttribute('src', 'Complect02' + '/'+this.Complect02[0]);
                     }
                     let g1 = document.createElement('img');
-                    g1.setAttribute('src', this.styleCount + '/'+this.styleCount[c]);
+
+                    if (this.styleCount == 1)
+                        g1.setAttribute('src', 'Complect01' + '/'+this.Complect01[c]);
+                    else {
+                        g1.setAttribute('src', 'Complect02' + '/'+this.Complect02[c]);
+                    }
+                     
                     place.innerHTML = '';
                     place.append(g);
                     place.append(g1);
                 } else {
+                    // let g = document.createElement('img');
+                    // g.setAttribute('src', this.styleCount + '/' +this.styleCount[Math.floor(c/10)]);
+                    // let g1 = document.createElement('img');
+                    // g1.setAttribute('src', this.styleCount + '/' +this.styleCount[c % 10]);
                     let g = document.createElement('img');
-                    g.setAttribute('src', this.styleCount + '/' +this.styleCount[Math.floor(c/10)]);
+                    if (this.styleCount == 1)
+                        g.setAttribute('src', 'Complect01' + '/'+this.Complect01[Math.floor(c/10)]);
+                    else {
+                        g.setAttribute('src', 'Complect02' + '/'+this.Complect02[Math.floor(c/10)]);
+                    }
                     let g1 = document.createElement('img');
-                    g1.setAttribute('src', this.styleCount + '/' +this.styleCount[c % 10]);
+
+                    if (this.styleCount == 1)
+                        g1.setAttribute('src', 'Complect01' + '/'+this.Complect01[c % 10]);
+                    else {
+                        g1.setAttribute('src', 'Complect02' + '/'+this.Complect02[c % 10]);
+                    }
                     place.innerHTML = '';
                     place.append(g);
                     place.append(g1);
